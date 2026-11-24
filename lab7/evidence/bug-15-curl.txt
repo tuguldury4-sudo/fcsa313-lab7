@@ -1,0 +1,22 @@
+$ cat body.json
+{"title":"Tom & Jerry","author":"A < B","year":1940}
+
+$ curl -i -X POST localhost:3000/api/books -H 'Content-Type: application/json' --data-binary @body.json
+HTTP/1.1 201 Created
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 13:27:33 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK","id":4}
+
+$ curl -i localhost:3000/api/books
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Thu, 15 Oct 2026 13:27:33 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+[{"id":1,"title":"Тунгалаг Тамир","author":"Ч.Лодойдамба","year":1971},{"id":2,"title":"Clean Code","author":"Robert C. Martin","year":2008},{"id":3,"title":"The Pragmatic Programmer","author":"D.Thomas & A.Hunt","year":1999},{"id":4,"title":"Tom &amp; Jerry","author":"A &lt; B","year":1940}]

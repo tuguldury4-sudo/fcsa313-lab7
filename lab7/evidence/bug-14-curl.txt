@@ -1,0 +1,39 @@
+$ curl -i -X DELETE localhost:3000/api/books/999
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 13:27:20 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK"}
+
+$ curl -i -X DELETE localhost:3000/api/books/2
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 13:27:20 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK"}
+
+$ curl -i -X DELETE localhost:3000/api/books/2      # ижил id-г дахин
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 13:27:20 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK"}
+
+$ curl -i localhost:3000/api/books
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Thu, 15 Oct 2026 13:27:20 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+[{"id":1,"title":"Тунгалаг Тамир","author":"Ч.Лодойдамба","year":1971},{"id":3,"title":"The Pragmatic Programmer","author":"D.Thomas & A.Hunt","year":1999}]

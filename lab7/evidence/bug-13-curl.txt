@@ -1,0 +1,21 @@
+$ curl -i -X POST localhost:3000/api/books -H 'Content-Type: application/json' -d 'null'
+curl: (56) Recv failure: Connection was reset
+(curl exit code: 56)
+
+$ curl -i localhost:3000/api/books      # 1 секундийн дараа
+curl: (7) Failed to connect to localhost:3000 after 2252 ms: Could not connect to server
+(curl exit code: 7)
+
+# node app.js ажиллаж байсан терминалын гаралт:
+Уншлагын жагсаалт: http://localhost:3000
+C:\THE_FEDzUP\hicheel\Программ хангамжийн чанарын баталгаа ба туршилт\lab07\app.js:130
+        title: esc(data.title || ''),
+                        ^
+
+TypeError: Cannot read properties of null (reading 'title')
+    at IncomingMessage.<anonymous> (C:\THE_FEDzUP\hicheel\Программ хангамжийн чанарын баталгаа ба туршилт\lab07\app.js:130:25)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+Node.js v24.18.0

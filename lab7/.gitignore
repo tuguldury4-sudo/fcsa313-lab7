@@ -1,0 +1,19 @@
+# Багшийн зааврын эх файлыг public репод оруулахгүй
+*.docx
+~$*
+
+# Багшийн өгсөн тестийн бай (Teams → Class Materials → Labs → Lab07) — репод оруулахгүй
+app.js
+
+# Node
+node_modules/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Түр зуурын файлууд
+*.tmp
+*.log
